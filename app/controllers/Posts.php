@@ -5,11 +5,18 @@
       if(!isLoggedIn()){
         redirect('/users/login');
       }
+
+      $this->postModel = $this->model('Post');
     }
 
 
     public function index(){
-      $data = [];
+      // Get Posts
+      $posts = $this->postModel->getPost();
+
+      $data = [
+        'posts' => $posts
+      ];
       $this->view('posts/index', $data);
     }
   }

@@ -19,15 +19,5 @@
       <p class="card-test"><?php echo $post->body; ?></p>
       <a href="<?php echo URLROOT; ?>/posts/show/<?php echo $post->postId; ?>" class="btn btn-dark">More</a>
     </div>
-
-
-
-
-
-
-
-
-
-
   <?php endforeach; ?>
 <?php require APPROOT . '/views/inc/footer.php'; ?>
